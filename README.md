@@ -1,6 +1,7 @@
-# parse pinyin sequence, separating them item by item
+# pysep
+拆分拼音字符串，按字拆开，例如libai拆分为li bai。方便计算名字的首写字母组合等。
 
-## how to use
+## 如何使用
 ```c
 pinyin_col_t *pyc = parse_pinyin_col("baijuyi");
 
