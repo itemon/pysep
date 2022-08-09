@@ -1,14 +1,26 @@
 # pysep
 拆分拼音字符串，按字拆开，例如libai拆分为li bai。方便计算名字的首写字母组合等。
 
+## 如何构建
+```shell
+mkdir build
+cd build
+cmake ../
+make
+```
+
+
 ## 如何使用
 ```c
 pinyin_col_t *pyc = parse_pinyin_col("baijuyi");
 
 for (size_t i = 0; i < pyc->cap; ++i) {
   char *syl = pyc->seq[i];
-  printf("syllable %s\n", syl);
+  printf("%s\n", syl);
 }
+// bai
+// ju
+// yi
 
 debug_pinyin_col(pyc);
 dispose_pinyin_col(pyc);
